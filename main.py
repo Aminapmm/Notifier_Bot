@@ -13,13 +13,8 @@ async def namshi_notifier(X:dict[Item]):
     for x in X:
         msg = f"**{X[x].name}**\n Price: {X[x].price}\n [CLICK HERE]({X[x].link})"
         await client.send_message(peer_id,msg,parse_mode="MD",link_preview=True)
-        await asyncio.sleep(random.uniform(1,5))
-
-async def main():
-    #send some msg to notifier channel
-    peer_id = await client.get_peer_id('https://t.me/+suTl5roT8nNlODI0')
-    await client.send_message(peer_id,"Hello,World!")
+        await asyncio.sleep(random.uniform(5,10))
     
 with client:
-    new_items = get_new_updates()
+    new_items = get_new_updates(db_name="namshi")
     client.loop.run_until_complete(namshi_notifier(new_items))

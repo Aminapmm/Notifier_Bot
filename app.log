@@ -1,0 +1,54 @@
+2024-09-04 21:20:13,925 - Attempt 1 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-04 21:20:16,968 - Attempt 2 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-04 21:20:20,022 - Attempt 3 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-04 21:20:23,079 - Attempt 4 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-04 21:20:26,142 - Attempt 5 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-04 21:20:29,195 - Attempt 6 at connecting failed: ConnectionError: [Errno 22] Could not connect to proxy 127.0.0.1:8086 [The remote computer refused the network connection]
+2024-09-05 13:33:56,807 - offer for Z2A69015288A0CB32AF2DZ found.
+2024-09-05 13:33:56,807 - offer for Z73070E717E4E5FC86A3DZ found.
+2024-09-05 13:33:56,807 - offer for Z387366C8743304B5862AZ found.
+2024-09-05 13:33:56,807 - offer for Z7E65C4CF2CA13A3F292DZ found.
+2024-09-05 13:33:56,807 - offer for Z1C88664680B3A2C5A107Z found.
+2024-09-05 13:33:56,807 - offer for Z97096C06A1CD0A1BF65AZ found.
+2024-09-05 13:33:56,807 - offer for ZCF94D92221711720F51FZ found.
+2024-09-05 13:33:56,807 - offer for Z6CFD77E4A6AA9D18DDE6Z found.
+2024-09-05 13:33:56,807 - offer for Z7D9280E3D40D9DCA2AB0Z found.
+2024-09-05 13:46:28,639 - Looking For new Offers...
+2024-09-05 13:46:37,391 - offer for ZBA3369CFD72E7E097EF7Z found.
+2024-09-05 13:46:37,391 - offer for ZDC0DB9B232FE842E169BZ found.
+2024-09-05 13:46:37,391 - offer for Z73070E717E4E5FC86A3DZ found.
+2024-09-05 13:46:37,391 - offer for ZCD62DD5539013B579ADEZ found.
+2024-09-05 13:46:37,391 - offer for ZBCBCEF40AD5CBA4721F0Z found.
+2024-09-05 13:46:37,391 - offer for Z1C88664680B3A2C5A107Z found.
+2024-09-05 13:46:37,391 - offer for ZFAD53431CF91C559116BZ found.
+2024-09-05 13:46:37,391 - offer for ZCF94D92221711720F51FZ found.
+2024-09-05 13:46:37,391 - offer for Z2A69015288A0CB32AF2DZ found.
+2024-09-05 13:46:37,391 - offer for Z7C61FD4F8A990080FEF3Z found.
+2024-09-05 13:46:37,391 - offer for Z7D9280E3D40D9DCA2AB0Z found.
+2024-09-05 13:46:37,391 - offer for ZA9F54FCADB55D6B7E70AZ found.
+2024-09-05 13:46:37,391 - offer for Z97096C06A1CD0A1BF65AZ found.
+2024-09-05 13:46:37,391 - offer for Z6CFD77E4A6AA9D18DDE6Z found.
+2024-09-05 13:46:37,391 - offer for Z30DB692B6159A291E993Z found.
+2024-09-05 13:46:37,391 - offer for Z7E65C4CF2CA13A3F292DZ found.
+2024-09-05 13:46:37,392 - offer for Z387366C8743304B5862AZ found.
+2024-09-05 13:46:37,392 - offer for Z29746D7DC9743BDC3326Z found.
+2024-09-05 17:13:04,708 - Looking For new Offers...
+2024-09-05 17:13:39,954 - 18 items Extracted from Namshi.
+2024-09-05 17:13:39,956 - offer for Z51A80FA09ECBBF0BA6A3Z found.
+2024-09-05 17:13:39,956 - offer for Z7E65C4CF2CA13A3F292DZ found.
+2024-09-05 17:13:39,956 - offer for Z37A4E734B825A7696DD5Z found.
+2024-09-05 17:13:39,956 - offer for ZBCBCEF40AD5CBA4721F0Z found.
+2024-09-05 17:13:39,956 - offer for Z387366C8743304B5862AZ found.
+2024-09-05 17:13:39,956 - offer for Z7D9280E3D40D9DCA2AB0Z found.
+2024-09-05 17:13:39,956 - offer for ZDC0DB9B232FE842E169BZ found.
+2024-09-05 17:13:39,956 - offer for Z29746D7DC9743BDC3326Z found.
+2024-09-05 17:13:39,956 - offer for ZBA3369CFD72E7E097EF7Z found.
+2024-09-05 17:13:39,956 - offer for Z30DB692B6159A291E993Z found.
+2024-09-05 17:13:39,956 - offer for ZFAD53431CF91C559116BZ found.
+2024-09-05 17:13:39,956 - offer for Z0CED99430FBB1835C405Z found.
+2024-09-05 17:13:39,956 - offer for ZA9F54FCADB55D6B7E70AZ found.
+2024-09-05 17:13:39,956 - offer for Z97096C06A1CD0A1BF65AZ found.
+2024-09-05 17:13:39,956 - offer for Z2A69015288A0CB32AF2DZ found.
+2024-09-05 17:13:39,956 - offer for ZCD62DD5539013B579ADEZ found.
+2024-09-05 17:13:39,957 - offer for Z1C88664680B3A2C5A107Z found.
+2024-09-05 17:13:39,957 - offer for Z7C61FD4F8A990080FEF3Z found.

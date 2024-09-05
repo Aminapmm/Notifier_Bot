@@ -6,7 +6,10 @@ from urllib.parse import urljoin
 import os
 import time
 import logging
+
+logging.basicConfig(filename="app.log",encoding='utf-8',format="{asctime} - {message}",style="{")
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 class Item:
     def __init__(self,element):
@@ -33,29 +36,40 @@ def namshi_scraper(url="https://www.namshi.com/uae-en/men-shoes-sports-trainers/
     logging.basicConfig(filename="log.txt",level=logging.INFO)
     res = request("GET",url).content
     soup = bs(res,'lxml')
-    items = soup.select(".ProductBox_container__wiajf .ProductBox_productBox__tPpGm")
+    scraped_items = soup.select(".ProductBox_container__wiajf .ProductBox_productBox__tPpGm")
+    items = {obj.serial: obj for obj in map(lambda x:Item(x),scraped_items)}
+    logger.info(f"{len(items)} items Extracted from Namshi.")
     return items
 
 def export_to_file(items:dict,db_name='dbfile'):
-    #file_name = datetime.now().strftime("%d%b%y")
+    logging.info(f"{len(items)} new item saved to {db_name}")
     with open(f"db/{db_name}",'ab') as db_file:
         pickle.dump(items,db_file)
 
 def load_db(db_file_name="dbfile"):#load db_file
-    with open(f"db/{db_file_name}",'rb') as db_file:
-        items = pickle.load(db_file)
-    return items
+    if os.path.exists(f"./{db_file_name}"):
+        with open(f"db/{db_file_name}",'rb') as db_file:
+            items = pickle.load(db_file)
+        return items
+    else:
+        return {}
 
 
 
 def get_new_updates(db_name='dbfile'):
-    new_items = {obj.serial: obj for obj in map(lambda x:Item(x),namshi_scraper())}
-    db = load_db(db_name)
+    logger.info("Looking For new Offers...")
+    new_items = namshi_scraper()
+    db = load_db(db_file_name=db_name)
     updates = set(new_items)-set(db)
     if len(updates) > 0:
-        print("There is new items that you should see.")
+        #print("There is new items that you should see.")
         updates = {k:new_items.get(k) for k in set(new_items)-set(db)}
         export_to_file(updates,db_name=db_name)
+        for item in updates:
+            logger.info(f"offer for {updates.get(item).name} found.")
+    else:
+        logger.info("there is no new offer.")
     return updates
 
-    
+if __name__=="__main__":
+    get_new_updates(db_name='namshi')
