@@ -22,15 +22,17 @@ class Item:
         get_name = lambda name:name[0].text+"-"+name[1].text
         self.name = get_name(element.select(".ProductBox_brand__oDc9f,.ProductBox_productTitle__6tQ3b"))
         self.date_updated = time.time()
+        self.message_text = f"**{self.name}**\n Price: {self.price}\n [CLICK HERE]({self.link})"
     
     def __str__(self):
-        return f"{self.name}\n{self.price}"
+        return f"{self.name}"
     
     def __eq__(self,other):
         return self.price == other.price
 
     def __ne__(self, other: object) -> bool:
         return self.price != other.price
+    
     
 def namshi_scraper(url="https://www.namshi.com/uae-en/men-shoes-sports-trainers/?page=1&f%5Bbrand_code%5D=nike&f%5Bbrand_code%5D=under_armour&sort%5Bby%5D=discount_percent&sort%5Bdir%5D=desc"):
     logging.basicConfig(filename="log.txt",level=logging.INFO)
