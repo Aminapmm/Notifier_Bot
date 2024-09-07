@@ -5,8 +5,11 @@ on:
   schedule:
     - cron: '0 */6 * * *'
 jobs:
+  
   build:
+    
     runs-on: ubuntu-latest
+    
     steps:
 
       - name: checkout repo content
@@ -26,6 +29,7 @@ jobs:
         env: 
           api_id: ${{ secrets.API_ID }}
           api_hash: ${{ secrets.API_HASH }}
+          session_string: ${{ secrets.SESSION_STRING }}
         run: python main.py
           
       - name: commit files
@@ -39,11 +43,10 @@ jobs:
         continue-on-error: true
         uses: ad-m/github-push-action@v0.6.0
         with:
-          github_token: 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 #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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
       - name: print changes
-        run: tail -5 app.log
-        
+        run: tail -5 app.log        
 
 
      

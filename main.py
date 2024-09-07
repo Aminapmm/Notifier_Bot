@@ -12,9 +12,9 @@ logging.basicConfig(filename="app.log",encoding='utf-8',format="{asctime} - {mes
 logger = logging.getLogger("telegram_bot")
 logger.setLevel(logging.INFO)
 
-api_id = os.getenv("API_ID")#"1813834"
-api_hash = os.getenv("API_HASH")#"567770705143bc5db93174935d80190c"
-secret_session = os.getenv("SESSION_STRING")
+api_id = os.getenv("api_id")#"1813834"
+api_hash = os.getenv("api_hash")#"567770705143bc5db93174935d80190c"
+secret_session = os.getenv("session_string")
 
 client = TelegramClient(StringSession(secret_session),api_id,api_hash,request_retries=2)
 
