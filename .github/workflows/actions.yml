@@ -26,6 +26,7 @@ jobs:
         env: 
           api_id: ${{ secrets.API_ID }}
           api_hash: ${{ secrets.API_HASH }}
+          session_string: ${{ secrets.SESSION_STRING }}
         run: python main.py
           
       - name: commit files
