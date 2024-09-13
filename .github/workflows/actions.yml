@@ -29,6 +29,7 @@ jobs:
         env: 
           api_id: ${{ secrets.API_ID }}
           api_hash: ${{ secrets.API_HASH }}
+          bot_token: ${{secrets.BOT_TOKEN }}
           session_string: ${{ secrets.SESSION_STRING }}
         run: python main.py
           
