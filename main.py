@@ -15,17 +15,15 @@ logger.setLevel(logging.INFO)
 
 api_id = os.getenv("api_id")
 api_hash = os.getenv("api_hash")
-secret_session = os.getenv("session_string")
-
+session_string = os.getenv("session_string")
 bot_token = os.getenv("bot_token")
 
-client = TelegramClient('bot',api_id,api_hash,request_retries=2).start(bot_token=bot_token)
+client = TelegramClient(StringSession(session_string),api_id,api_hash,connection_retries=2,request_retries=2).start(bot_token=bot_token)
 
 async def telegram_notifier(X:dict[Item]):
-    #notifier_channel peer_id:-100217547664 
     for x in X:
         try:
-            msg = await client.send_message(-100217547664,X[x].msg,parse_mode="MD",link_preview=True)
+            msg = await client.send_message(-1002175476647,X[x].msg,parse_mode="MD",link_preview=True)
             logger.info(f'{urlparse(X[x].link).netloc}: a message has been sent for {X[x].__str__()} with id:{msg.id}')
 
         except FloodWaitError as e:
